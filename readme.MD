@@ -101,5 +101,5 @@ Terminates the user's session and clears relevant cookies. Optionally redirects 
 This project implements standard security protocols and complies with OAuth 2.0 and OpenID Connect specifications to ensure secure transmission of information. CORS is configured for cross-origin resource sharing, allowing the server to interact securely with resources from different domains.
 Config cors and other security limitations through auth/configuration/SecurityConfiguration.
 
-This service, based on Spring Security, performs authentication and authorization using the access token obtained from after successful login.
+This service, based on Spring Security, performs authentication and authorization using the access token obtained from successful login.
 Check auth/configuration for customizing your needs. 
