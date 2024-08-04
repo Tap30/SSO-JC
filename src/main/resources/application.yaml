@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILES:TEST}
+  main:
+    banner-mode: 'off'
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/java-client
+      auto-index-creation: true
+
+logging:
+  level:
+    tapsi:
+      sso:
+        client:
+          java: TRACE
+
+api:
+  base-url: http://localhost:8080
+
+sso:
+  issuer-uri: ${SSO_ISSUER}
+  jwk-set-uri: ${SSO_JWK_URI}
+  client:
+    credentials:
+      client-id: ${CLIENT_ID}
+      client-secret: ${CLIENT_SECRET}
+    redirect-uri: ${AUTH_REDIRECT_URI}
+
+cors:
+  allowed-origins: '*'
+  allowed-methods: GET,PUT,POST,DELETE,OPTIONS
+  allowed-headers: x-requested-with,authorization,Content-Type,Authorization,credential,X-XSRF-TOKEN,x-authorization,x-agent,cookie
+  allow-credentials: true
+
+tokens:
+  auth-token:
+    same-site: ${COOKIE_TOKEN_SAME_SITE:Lax}
+    http-only: true

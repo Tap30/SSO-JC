@@ -1,0 +1,10 @@
+cors:
+  allowed-origins: '*'
+  allowed-methods: '*'
+  allowed-headers: '*'
+  allow-credentials: 'true'
+
+tokens:
+  auth-token:
+    same-site: None
+    http-only: false
