@@ -4,11 +4,7 @@
 
 The SSO-JC (Single Sign-On for Java Applications) project provides a robust implementation of OAuth 2.0 and OpenID Connect protocols, facilitating secure authentication and authorization functionalities across distributed systems. This system manages user sessions and tokens, enabling applications to
 authenticate users and access their profile information securely.
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=go" />
-  </a>
-</p>
+
 
 ## Up and Running
 
@@ -104,7 +100,7 @@ Terminates the user's session and clears relevant cookies. Optionally redirects 
 ## Security and Compliance
 
 This project implements standard security protocols and complies with OAuth 2.0 and OpenID Connect specifications to ensure secure transmission of information. CORS is configured for cross-origin resource sharing, allowing the server to interact securely with resources from different domains.
-Config cors and other security limitations through /auth/configuration/SecurityConfiguration.
+Config cors and other security limitations through auth/configuration/SecurityConfiguration.
 
 This service, based on Spring Security, performs authentication and authorization using the access token obtained from after successful login.
-Check /auth/configuration for customizing your needs. 
+Check auth/configuration for customizing your needs. 
