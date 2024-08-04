@@ -27,7 +27,6 @@ If you are using `docker-compose`, you should change the environment variables i
 version: '3.7'
 services:
   sso-java-client:
-    #image: sso-java-client:latest
     network_mode: host
     ports:
       - "8080:8080"
