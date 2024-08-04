@@ -19,7 +19,7 @@ docker-compose up -d
 
 ## Configuration
 
-The application's configuration is managed through a `application.yml` file, which must specify keys such as `server_port`, `sso_issuer`, `client_id`, and `client_secret`. Errors in configuration loading or parsing are handled with immediate log output and system halt to prevent startup with incorrect settings.
+The application's configuration is managed through a `application.yml` file, which must specify keys such as `server_port`, `sso_issuer`, `jwk_set_uri`, `client_id`, and `client_secret`. Errors in configuration loading or parsing are handled with immediate log output and system halt to prevent startup with incorrect settings.
 
 If you are using `docker-compose`, you should change the environment variables in the `docker-compose.yaml` file to match your configuration:
 
@@ -35,7 +35,7 @@ services:
       - CLIENT_ID=YOUR_CLIENT_ID
       - CLIENT_SECRET=YOUR_CLIENT_SECRET
       - SSO_ISSUER=https://demo-accounts-api.tapsi.ir/api/v1/sso-user/oidc
-      - SSO_JWK_URI=https://demo-accounts-api.tapsi.ir/api/v1/sso-user/keys
+      - SSO_JWK_SET_URI=https://demo-accounts-api.tapsi.ir/api/v1/sso-user/oidc/keys
       - AUTH_REDIRECT_URI=http://localhost:3000/
     build:
       context: ./
